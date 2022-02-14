@@ -18,7 +18,7 @@ answer_turn="p2";
 
 function check(){
     get_ans=document.getElementById("input_check_box").value;
-     if (answer == actual_answer){
+     if (get_ans == actual_answer){
          if(answer_turn == "p1"){
              player1_score=player1_score+1;
              document.getElementById("player1_score").innerHTML=player1_score;
