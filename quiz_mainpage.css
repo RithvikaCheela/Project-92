@@ -1,0 +1,22 @@
+body
+{
+	background: rgb(225, 149, 255);
+}
+#output{
+    background: rgb(181, 44, 245);
+    border-radius: 10px;
+    border-top: 10px solid ;
+    padding: 10px;
+    float: none;
+    text-align: left;
+}
+#title{
+    color: blueviolet;
+}
+#btn_send{
+	width: 10%;
+    background-color: rgb(185, 111, 255);
+}
+#no1 , #no2{
+	width: 60%;
+}
