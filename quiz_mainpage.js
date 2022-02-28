@@ -1,3 +1,15 @@
+player1_score=0;
+player2_score=0;
+player1_name=localStorage.getItem("player1_name");
+player2_name=localStorage.getItem("player2_name");
+
+    document.getElementById("player1_name").innerHTML=player1_name + " : ";
+    document.getElementById("player2_name").innerHTML=player2_name + " : ";
+    document.getElementById("player1_score").innerHTML=player1_score;
+    document.getElementById("player2_score").innerHTML=player2_score;
+    document.getElementById("player_question").innerHTML="Question Turn- " + player1_name;
+    document.getElementById("player_answer").innerHTML="Answer Turn- "+ player2_name;
+
 function send(){
     no1=document.getElementById("no1").value;
     no2=document.getElementById("no2").value;
@@ -13,8 +25,11 @@ function send(){
     document.getElementById("no1").value="";
     document.getElementById("no2").value="";
 }
+
 question_turn="p1";
 answer_turn="p2";
+player1_name=document.getElementById("player1_name").value;
+player2_name=document.getElementById("player2_name").value;
 
 function check(){
     get_ans=document.getElementById("input_check_box").value;
@@ -27,7 +42,6 @@ function check(){
              player2_score=player2_score+1;
              document.getElementById("player2_score").innerHTML=player2_score;
          }
- 
      }
      if(question_turn == "p1"){
          question_turn ="p2";
@@ -37,7 +51,6 @@ function check(){
          question_turn= "p1";
          document.getElementById("player_question").innerHTML="Question Turn - "+ player1_name;
      }
- 
      if(answer_turn == "p1"){
          answer_turn= "p2";
          document.getElementById("player_answer").innerHTML="Answer Turn - "+ player2_name;
