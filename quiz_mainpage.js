@@ -59,7 +59,21 @@ function check(){
          answer_turn= "p1";
          document.getElementById("player_answer").innerHTML="Answer Turn - " + player1_name;
      }
- 
-     document.getElementById("output").innerHTML="";
+     if (question_turn == "p1"){
+         q_turn=player1_name;        
+     }
+     else{
+         q_turn=player2_name;
+     }
+     if (answer_turn == "p1"){
+        a_turn=player1_name;        
+    }
+    else{
+        a_turn=player2_name;
+    }
+     player_question_turn="<h3 id='player_question'></h3>" + " = " + q_turn;
+     player_answer_turn="<h3 id='player_answer'></h3>" + " = " + a_turn;
+     document.getElementById("player_question").innerHTML=question_turn;
+     document.getElementById("player_answer").innerHTML=answer_turn;
  }
  
